@@ -1,5 +1,5 @@
-import Notifier from '@the-goat/notifier';
-import { goatConfig } from '@the-goat/goat';
+import { notify as Notifier, goatConfig } from '@the-goat/core';
+
 import updateNotifier from 'update-notifier';
 import commander from 'commander';
 import { readFileSync } from 'fs';
@@ -14,7 +14,7 @@ import setCommandProject from './commands/project';
 const pkg = JSON.parse(readFileSync(resolve(__dirname, '../package.json'), 'utf-8'));
 const goat = new commander.Command();
 
-async function base() {
+export default async function base() {
   updateNotifier({ pkg }).notify();
   goat
     .version(pkg.version, '-v, -V, --version', 'output the current version')
@@ -49,5 +49,3 @@ async function base() {
   goat.allowUnknownOption(true);
   goat.parse(process.argv);
 }
-
-export default base;

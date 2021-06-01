@@ -1,6 +1,7 @@
-import Notifier from '@the-goat/notifier';
+import {
+  notify as Notifier, watch, GoatTask, GoatEvents,
+} from '@the-goat/core';
 import commander, { Command } from 'commander';
-import { watch, Goat, GoatEvents } from '@the-goat/goat';
 
 commander.allowUnknownOption(true);
 
@@ -9,7 +10,7 @@ commander.allowUnknownOption(true);
  * @param {Object} config
  * @param {Array} packages
  */
-async function loadWatchCommands(config: Command, packages:Goat[]) {
+async function loadWatchCommands(config: Command, packages:GoatTask[]) {
   const watchPackages = packages.filter((module) => module.watch !== undefined);
   const events = new GoatEvents();
   watch(events);
@@ -23,7 +24,7 @@ async function loadWatchCommands(config: Command, packages:Goat[]) {
  * @param {Array} packages
  * @returns {function}
  */
-export default function setCommandWatch(packages: Goat[]) {
+export default function setCommandWatch(packages: GoatTask[]) {
   const command = new commander.Command('watch')
     .command('watch')
     .alias('w')

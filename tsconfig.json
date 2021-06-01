@@ -3,35 +3,32 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     "paths": {
-      "@the-goat/compile": [
+      "@the-goat/task-compile": [
         "compile"
       ],
-      "@the-goat/goat": [
-        "goat/src"
+      "@the-goat/core": [
+        "core/src"
       ],
-      "@the-goat/goat-babel": [
-        "goat-babel/src"
+      "@the-goat/task-babel": [
+        "task-babel/src"
       ],
-      "@the-goat/goat-eslint": [
-        "goat-eslint/src"
+      "@the-goat/task-eslint": [
+        "task-eslint/src"
       ],
-      "@the-goat/goat-modernizr": [
-        "goat-modernizr/src"
+      "@the-goat/task-modernizr": [
+        "task-modernizr/src"
       ],
-      "@the-goat/goat-styles": [
-        "goat-styles/src"
+      "@the-goat/task-styles": [
+        "task-styles/src"
       ],
-      "@the-goat/icons": [
-        "icons/src"
+      "@the-goat/task-icons": [
+        "task-icons/src"
       ],
-      "@the-goat/js-bundler": [
-        "js-bundler/src"
+      "@the-goat/task-js-bundler": [
+        "task-js-bundler/src"
       ],
-      "@the-goat/notifier": [
-        "notifier/src"
-      ],
-      "@the-goat/storybook": [
-        "storybook/src"
+      "@the-goat/task-storybook": [
+        "task-storybook/src"
       ],
       "@the-goat/storybook-helpers": [
         "storybook-helpers/src"

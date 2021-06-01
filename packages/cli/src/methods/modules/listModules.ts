@@ -1,5 +1,5 @@
-import Notifier from '@the-goat/notifier';
-import { goatConfig, IGoatInternalProjectConfig } from '@the-goat/goat';
+import { notify as Notifier, goatConfig, IGoatInternalProjectConfig } from '@the-goat/core';
+
 import collectModules from './collectModules';
 
 /**

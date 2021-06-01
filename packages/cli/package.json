@@ -1,6 +1,6 @@
 {
   "name": "@the-goat/cli",
-  "version": "1.13.5",
+  "version": "2.0.12",
   "description": "",
   "repository": {
     "type": "git",
@@ -15,20 +15,21 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@the-goat/babel": "^1.12.1",
-    "@the-goat/compile": "^1.11.5",
-    "@the-goat/eslint": "^1.12.1",
-    "@the-goat/goat": "*",
-    "@the-goat/icons": "^1.13.5",
-    "@the-goat/js-bundler": "^1.12.1",
-    "@the-goat/modernizr": "^1.10.0",
-    "@the-goat/notifier": "^1.12.1",
-    "@the-goat/storybook": "^1.12.1",
-    "@the-goat/styles": "^1.12.1",
+    "@the-goat/core": "^2.0.11",
+    "@the-goat/storybook-helpers": "^2.0.7",
+    "@the-goat/task-babel": "^2.0.11",
+    "@the-goat/task-compile": "^2.0.11",
+    "@the-goat/task-eslint": "^2.0.11",
+    "@the-goat/task-icons": "^2.0.12",
+    "@the-goat/task-js-bundler": "^2.0.11",
+    "@the-goat/task-modernizr": "^2.0.11",
+    "@the-goat/task-storybook": "^2.0.11",
+    "@the-goat/task-styles": "^2.0.11",
     "bluebird": "^3.7.2",
     "commander": "^7.2.0",
     "import-global": "^0.1.0",
     "inquirer": "^7.3.3",
+    "json-schema": "^0.3.0",
     "lodash": "^4.17.20",
     "mkdirp": "^1.0.4",
     "update-notifier": "^5.1.0"
@@ -47,9 +48,10 @@
     "compile": "../../node_modules/.bin/tsc -p tsconfig.build.json",
     "watch": "../../node_modules/.bin/tsc -w -p tsconfig.build.json"
   },
-  "gitHead": "cee2b439089c6f90cdf345d85bbf0ae4414988b3",
+  "gitHead": "cb00bb74e30b18a7c8a4108a30e4975d4dc04e90",
   "devDependencies": {
     "@types/bluebird": "^3.5.34",
+    "@types/inquirer": "^7.3.1",
     "@types/lodash": "^4.14.168",
     "@types/mkdirp": "^1.0.1",
     "@types/update-notifier": "^5.0.0"

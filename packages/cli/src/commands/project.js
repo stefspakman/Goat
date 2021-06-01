@@ -1,5 +1,4 @@
-import Notifier from '@the-goat/notifier';
-import { goatConfig } from '@the-goat/goat';
+import { notify as Notifier, goatConfig } from '@the-goat/core';
 
 const commander = require('commander');
 const { projectModules } = require('../methods/modules/listModules');

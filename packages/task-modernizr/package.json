@@ -1,0 +1,26 @@
+{
+  "name": "@the-goat/task-modernizr",
+  "version": "2.0.11",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "../../node_modules/.bin/rimraf -rf ./dist",
+    "compile": "../../node_modules/.bin/tsc -p tsconfig.build.json",
+    "watch": "../../node_modules/.bin/tsc -w -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build"
+  },
+  "author": "Stef Spakman <goat@stefspakman.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@the-goat/core": "^2.0.11",
+    "customizr": "^2.0.1",
+    "lodash": "^4.17.20"
+  },
+  "gitHead": "cb00bb74e30b18a7c8a4108a30e4975d4dc04e90",
+  "goat": {
+    "name": "Goat Modernizr",
+    "description": "Generate a custom modernizr file"
+  }
+}

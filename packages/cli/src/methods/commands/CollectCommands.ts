@@ -1,9 +1,9 @@
 /**
  * Collect commands defined by the modules
  */
-import { Goat } from '@the-goat/goat';
+import { GoatTask } from '@the-goat/core';
 
-async function CollectCommands(packages: Goat[]) {
+async function CollectCommands(packages: GoatTask[]) {
   return packages.map((module) => module.getCommand());
 }
 

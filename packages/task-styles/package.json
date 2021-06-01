@@ -1,0 +1,38 @@
+{
+  "name": "@the-goat/task-styles",
+  "version": "2.0.11",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "../../node_modules/.bin/rimraf -rf ./dist",
+    "compile": "../../node_modules/.bin/tsc -p tsconfig.build.json",
+    "watch": "../../node_modules/.bin/tsc -w -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build"
+  },
+  "author": "Stef Spakman <goat@stefspakman.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@the-goat/core": "^2.0.11",
+    "compass-importer": "^0.4.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-filter": "^6.0.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-multi-dest": "^1.3.7",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sizereport": "^1.2.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-sass-alias-importer": "^1.0.1",
+    "postcss": "^8.2.2",
+    "postcss-pxtorem": "^5.1.1"
+  },
+  "gitHead": "cb00bb74e30b18a7c8a4108a30e4975d4dc04e90",
+  "goat": {
+    "name": "Goat Styles",
+    "description": "A comprehensive task to compile SCSS to CSS"
+  }
+}

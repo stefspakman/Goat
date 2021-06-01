@@ -1,11 +1,11 @@
-import { Goat } from '@the-goat/goat';
+import { Goat } from '@the-goat/core';
 import loadModule from './loadModule';
 
 test('Load a module', () => {
   const modules = [
-    { name: 'Goat Styles', package: '@the-goat/styles' },
-    { name: 'Goat Babel', package: '@the-goat/babel' },
-    { name: 'Goat ESlint', package: '@the-goat/eslint' },
+    { name: 'Goat Styles', package: '@the-goat/task-styles' },
+    { name: 'Goat Babel', package: '@the-goat/task-babel' },
+    { name: 'Goat ESlint', package: '@the-goat/task-eslint' },
   ];
 
   modules.forEach((ref) => {

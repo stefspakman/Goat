@@ -1,0 +1,37 @@
+{
+  "name": "@the-goat/task-icons",
+  "version": "2.0.12",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "../../node_modules/.bin/rimraf -rf ./dist",
+    "compile": "../../node_modules/.bin/tsc -p tsconfig.build.json",
+    "watch": "../../node_modules/.bin/tsc -w -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build"
+  },
+  "bin": {
+    "task-icons": "./bin/task-icons.js"
+  },
+  "author": "Stef Spakman <goat@stefspakman.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@the-goat/core": "^2.0.11",
+    "ejs": "^3.1.5",
+    "get-stream": "^6.0.0",
+    "lodash": "^4.17.20",
+    "prettier": "^2.2.1",
+    "short-hash": "^1.0.0",
+    "svg2ttf": "^5.0.0",
+    "svgicons2svgfont": "^9.1.1",
+    "ttf2eot": "^2.0.0",
+    "ttf2woff": "^2.0.2",
+    "ttf2woff2": "^4.0.1"
+  },
+  "goat": {
+    "name": "Icons",
+    "description": "Generate icon font files based on svg files"
+  },
+  "gitHead": "cb00bb74e30b18a7c8a4108a30e4975d4dc04e90"
+}
